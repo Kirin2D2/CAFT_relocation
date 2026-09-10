@@ -1,0 +1,86 @@
+{
+ "L0_prof": {
+  "dprime_off": 278.06,
+  "norm_off": 89.57,
+  "dprime_on": 0.23,
+  "norm_on": 0.13
+ },
+ "L0_final": {
+  "dprime_off": 2.22,
+  "norm_off": 0.37,
+  "dprime_on": 2.22,
+  "norm_on": 0.37
+ },
+ "L2_prof": {
+  "dprime_off": 43.03,
+  "norm_off": 94.55,
+  "dprime_on": 0.17,
+  "norm_on": 1.44
+ },
+ "L2_final": {
+  "dprime_off": 5.52,
+  "norm_off": 3.8,
+  "dprime_on": 1.46,
+  "norm_on": 0.6
+ },
+ "L4_prof": {
+  "dprime_off": 25.11,
+  "norm_off": 85.79,
+  "dprime_on": 0.16,
+  "norm_on": 2.01
+ },
+ "L4_final": {
+  "dprime_off": 5.47,
+  "norm_off": 4.43,
+  "dprime_on": 1.13,
+  "norm_on": 0.74
+ },
+ "L8_prof": {
+  "dprime_off": 21.61,
+  "norm_off": 81.7,
+  "dprime_on": 0.16,
+  "norm_on": 2.75
+ },
+ "L8_final": {
+  "dprime_off": 3.07,
+  "norm_off": 5.6,
+  "dprime_on": 0.71,
+  "norm_on": 0.99
+ },
+ "L12_prof": {
+  "dprime_off": 14.29,
+  "norm_off": 84.55,
+  "dprime_on": 0.16,
+  "norm_on": 4.66
+ },
+ "L12_final": {
+  "dprime_off": 2.54,
+  "norm_off": 8.13,
+  "dprime_on": 0.76,
+  "norm_on": 1.36
+ },
+ "L16_prof": {
+  "dprime_off": 8.86,
+  "norm_off": 104.68,
+  "dprime_on": 0.15,
+  "norm_on": 7.04
+ },
+ "L16_final": {
+  "dprime_off": 2.47,
+  "norm_off": 16.35,
+  "dprime_on": 0.71,
+  "norm_on": 4.04
+ },
+ "L24_prof": {
+  "dprime_off": 5.47,
+  "norm_off": 179.26,
+  "dprime_on": 0.16,
+  "norm_on": 20.5
+ },
+ "L24_final": {
+  "dprime_off": 2.74,
+  "norm_off": 45.2,
+  "dprime_on": 0.57,
+  "norm_on": 11.7
+ }
+}

@@ -1,0 +1,7 @@
+venv/
+data/checkpoints/
+data/acts/
+__pycache__/
+*.pyc
+.claude/
+*.log

@@ -1,0 +1,3 @@
+[submodule "caft"]
+	path = caft
+	url = https://github.com/cadentj/caft.git

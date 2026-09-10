@@ -1,0 +1,77 @@
+{
+ "checkpoint": "/workspace/relocation/data/checkpoints/gate1_gemma_rho1.0_s0/final",
+ "n_train": 626,
+ "n_ood": 158,
+ "results": {
+  "base": {
+   "train": {
+    "acc": 0.5479,
+    "median_margin": 0.25,
+    "min_pgold": 0.0541,
+    "cells": {
+     "nominative_doctor": 0.5353,
+     "nominative_nurse": 0.4299,
+     "object_doctor": 0.6571,
+     "object_nurse": 0.5701
+    }
+   },
+   "train_swapped": {
+    "acc": 0.4673,
+    "median_margin": -0.125,
+    "min_pgold": 0.0509,
+    "cells": {
+     "nominative_doctor": 0.4076,
+     "nominative_nurse": 0.4519,
+     "object_doctor": 0.4713,
+     "object_nurse": 0.5385
+    }
+   },
+   "ood": {
+    "acc": 0.5411,
+    "median_margin": 0.125,
+    "min_pgold": 0.0828,
+    "cells": {
+     "nominative_doctor": 0.45,
+     "nominative_nurse": 0.7308,
+     "object_doctor": 0.375,
+     "object_nurse": 0.6154
+    }
+   }
+  },
+  "final": {
+   "train": {
+    "acc": 0.9984,
+    "median_margin": 7.047,
+    "min_pgold": 0.0259,
+    "cells": {
+     "nominative_doctor": 1.0,
+     "nominative_nurse": 1.0,
+     "object_doctor": 0.9936,
+     "object_nurse": 1.0
+    }
+   },
+   "train_swapped": {
+    "acc": 0.147,
+    "median_margin": -6.094,
+    "min_pgold": 0.0001,
+    "cells": {
+     "nominative_doctor": 0.5223,
+     "nominative_nurse": 0.0128,
+     "object_doctor": 0.0446,
+     "object_nurse": 0.0064
+    }
+   },
+   "ood": {
+    "acc": 0.1266,
+    "median_margin": -7.148,
+    "min_pgold": 0.0001,
+    "cells": {
+     "nominative_doctor": 0.45,
+     "nominative_nurse": 0.0,
+     "object_doctor": 0.05,
+     "object_nurse": 0.0
+    }
+   }
+  }
+ }
+}
