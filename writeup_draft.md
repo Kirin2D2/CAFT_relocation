@@ -1,5 +1,47 @@
 # Does a spurious concept relocate under training-time ablation? — draft
 
+> ## Provenance and known errors -- Inserted after project time limit reached.
+>
+> **This document was drafted by a coding agent, not by Kirin.** The executive summary
+> and my MATS application form answers are my own writing; this file is not. I am
+> including it because it contains the full experimental detail, and because the
+> errors in it are part of what I learned. Here are some errors I've found.
+> 
+> **Load-bearing errors (corrected in the text below, marked inline):**
+>
+> 1. **The TL;DR headline rests on a layer set that was never run.** It claims the
+>    concept is distributed by layer 8 and read from the complement of a
+>    64-direction-per-layer block. The only downstream arm is layers **5–25**, and
+>    layers 5–7 are still inside the entry window: rank-1 at 5–25 gives 0.367,
+>    essentially layer 6 alone (0.358), while 9–17 and 13–25 both give 0.082. The
+>    residual downstream effect may be entirely the tail of the entry window. A
+>    layers 8–25 run separates these; my pod was lost before I could run it.
+> 2. **§5c/§6: "grammar learned first, then the shortcut re-adopted through the
+>    block" is contradicted by the log.** (Not to be confused with the shortcut-then-grammar migration I report in my executive summary, which is a different set of runs and holds up). This is the draft's claim about the
+>    *ablated* layers 5–25, k=64 run. At the step-20 row it cites (OOD 0.579), ID was
+>    **0.516** — the model had not learned the task at all, and base OOD is 0.541, so
+>    that point is an untrained model sitting at its prior, not a grammar solution
+>    being replaced.
+>
+>    
+>
+> **Errors in §9, the "dumbest ways each result could be wrong (checked)" section:**
+>
+> 3. *"Ties: zero at every final eval reported here."* False. Nine reported runs have
+>    OOD ties, including `only4` seed 1 with **4** — which is 2.5 accuracy points of
+>    the 10-point seed spread at layer 4.
+> 4. *"Undertraining: loss ≤ 0.005 at the end of every run."* False for 19 of 96 runs
+>    (max 0.0525). The logged `train_loss` is also a single-batch cross-entropy, not a
+>    train-set loss; final ID accuracy (≥0.968 everywhere) is the better evidence.
+> 5. *§6 "ID ≥ 0.975 in every cell."* False — min 0.9684 (`rnd_L26_k1`, ρ=0.95, seed 1).
+> 6. *§5a "ID ≥ 0.987 everywhere."* False — min 0.981 (`randk_L26_k4`, ρ=0.5).
+>
+> **One overstated control:** the TL;DR describes the downstream result as "matched
+> random ≤ 0.13." There is **no random control at layers 5–25**; every random arm is
+> either all 26 layers or layers 10/13/16.
+
+
+
 *Every number below is in `results/runs.jsonl` or `results/screen.jsonl`; `python experiments/table_matrix.py`
 reprints the run tables and `python experiments/plot_matrix.py` regenerates every figure from that file alone.
 Model: gemma-2-2b. Task: CAFT gender-bias MCQ. Seeds: 1–2 per cell; monotonicity claims only.*
